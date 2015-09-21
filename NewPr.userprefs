@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Droid\NewPr.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.56.101:5555" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NewPr\MyPage.xaml.cs">
+    <Files>
+      <File FileName="NewPr\MyPage.xaml" Line="1" Column="1" />
+      <File FileName="NewPr\MyPage.xaml.cs" Line="33" Column="1" />
+      <File FileName="NewPr\NewPr.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
