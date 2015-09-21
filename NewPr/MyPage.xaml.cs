@@ -8,10 +8,12 @@ namespace NewPr
 	public partial class MyPage : ContentPage
 	{
 		private bool operation_pressed = false, equals_pressed = false;
+		public string str;
 
 		public MyPage ()
 		{
 			InitializeComponent ();
+			new Wrapper (this);
 		}
 
 		public event EventHandler operatorEvent = null;
@@ -27,8 +29,6 @@ namespace NewPr
 			equals_pressed = false;
 			operation_pressed = false;
 
-
-
 		}
 
 		private void OnCEClicked(object sender, System.EventArgs e)
@@ -38,20 +38,24 @@ namespace NewPr
 
 		private void OnCClicked(object sender, System.EventArgs e)
 		{
-			value = 0;
 			Output.Text = "0";
 		}
 
 		private void OnOperatorClicked(object sender, System.EventArgs e)
 		{
+			str = Output.Text;
 			operation_pressed = true;
-			buttonEvent.Invoke (sender,e);
+			operatorEvent.Invoke (sender,e);
+			Output.Text = str;
 		}
 
 		private void OnEquelsClicked(object sender, System.EventArgs e)
 		{
+			str = Output.Text;
 			equals_pressed = true;
 			equelsEvent.Invoke (sender,e);
+			Output.Text = str;
+			operation_pressed = false;
 		}
 	}
 }

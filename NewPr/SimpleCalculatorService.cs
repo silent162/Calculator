@@ -43,6 +43,9 @@ namespace NewPr
 			case "/":
 				return Div(x,y);
 				break;
+			default:
+				return 0;
+				break;
 
 			}
 		 }
