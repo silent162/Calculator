@@ -23,20 +23,33 @@ namespace NewPr
 
 		private void OnButtonClicked(object sender, System.EventArgs e)
 		{
+			Button button = (Button)sender;
+
+			if (button.Text == "." && Output.Text == "0")
+			{
+				point_pressed = true;
+				Output.Text = "0.";
+			}
+
 			if ((Output.Text == "0") || operation_pressed || equals_pressed || (Output.Text == "На ноль делить нельзя!"))
 				Output.Text = "";
 									
-			Button button = (Button)sender;
-			if (button.Text == ".")
+			/*if (button.Text == ".") 
+			{
+				point_pressed = true;
+				Output.Text += button.Text;
+			}*/
+
+			if (point_pressed == false && button.Text == ".") 
+			{				
+				Output.Text += button.Text;
 				point_pressed = true;
 
-			if(point_pressed == false)
-				Output.Text += button.Text;
-			else if(point_pressed == true && button.Text != ".")
-			         Output.Text += button.Text;
-
-			if(Output.Text == ".")
-				Output.Text = "0.";
+			} 
+			else if (point_pressed == true && button.Text != ".")
+					Output.Text += button.Text;
+			else if (button.Text != ".")
+				    Output.Text += button.Text;
 
 			equals_pressed = false;
 			operation_pressed = false;
@@ -46,11 +59,13 @@ namespace NewPr
 		private void OnCEClicked(object sender, System.EventArgs e)
 		{
 			Output.Text = "0";
+			point_pressed = false;
 		}
 
 		private void OnCClicked(object sender, System.EventArgs e)
 		{
 			Output.Text = "0";
+			point_pressed = false;
 		}
 
 		private void OnOperatorClicked(object sender, System.EventArgs e)

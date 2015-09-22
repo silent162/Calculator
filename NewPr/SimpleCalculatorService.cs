@@ -2,7 +2,7 @@
 
 namespace NewPr
 {
-	public class SimpleCalculatorService
+	public class SimpleCalculatorService : ICalculatorService
 	{
 		public double Summ(double x, double y)
 		{

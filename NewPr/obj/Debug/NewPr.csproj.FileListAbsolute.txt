@@ -4,7 +4,6 @@ C:\Users\Twin\Documents\Projects\NewPr\NewPr\bin\Debug\Xamarin.Forms.Core.dll
 C:\Users\Twin\Documents\Projects\NewPr\NewPr\bin\Debug\Xamarin.Forms.Xaml.dll
 C:\Users\Twin\Documents\Projects\NewPr\NewPr\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\Twin\Documents\Projects\NewPr\NewPr\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Twin\Documents\Projects\NewPr\NewPr\obj\Debug\NewPr.csprojResolveAssemblyReference.cache
 C:\Users\Twin\Documents\Projects\NewPr\NewPr\obj\Debug\MyPage.xaml.g.cs
 C:\Users\Twin\Documents\Projects\NewPr\NewPr\obj\Debug\NewPr.dll
 C:\Users\Twin\Documents\Projects\NewPr\NewPr\obj\Debug\NewPr.pdb
