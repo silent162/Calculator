@@ -27,26 +27,20 @@ namespace NewPr
 			    return x / y;
 		}
 
-		public double Equels(double x, double y, string operation)
+		public double Equals(double x, double y, string operation)
 		{
 			switch (operation)
 			{
 			case "+":
 				return Summ(x,y);
-				break;
 			case "-":
 				return Diff(x,y);
-				break;
 			case "*":
 				return Multi(x,y);
-				break;
 			case "/":
 				return Div(x,y);
-				break;
-			default:
+     		default:
 				return 0;
-				break;
-
 			}
 		 }
 

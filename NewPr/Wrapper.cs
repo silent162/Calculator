@@ -17,7 +17,7 @@ namespace NewPr
 			this.simpleCalc = new SimpleCalculatorService ();
 			this.myPage = myPage;
 			this.myPage.operatorEvent += new EventHandler(MyPage_operatorEvent);
-			this.myPage.equelsEvent += new EventHandler (MyPage_equelsEvent);
+			this.myPage.equalsEvent += new EventHandler (MyPage_equalsEvent);
 		}
 
 
@@ -29,7 +29,7 @@ namespace NewPr
 
 		}
 
-		void MyPage_equelsEvent (object sender, EventArgs e)
+		void MyPage_equalsEvent (object sender, EventArgs e)
 		{
 			
 			switch (operation) {

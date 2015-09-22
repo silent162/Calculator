@@ -7,7 +7,9 @@ namespace NewPr
 {
 	public partial class MyPage : ContentPage
 	{
-		private bool operation_pressed = false, equals_pressed = false;
+		private bool operation_pressed = false;
+		private bool equals_pressed = false;
+		private bool point_pressed = false;
 		public string str;
 
 		public MyPage ()
@@ -17,15 +19,25 @@ namespace NewPr
 		}
 
 		public event EventHandler operatorEvent = null;
-		public event EventHandler equelsEvent = null;
+		public event EventHandler equalsEvent = null;
 
 		private void OnButtonClicked(object sender, System.EventArgs e)
 		{
 			if ((Output.Text == "0") || operation_pressed || equals_pressed || (Output.Text == "На ноль делить нельзя!"))
 				Output.Text = "";
-			
+									
 			Button button = (Button)sender;
-			Output.Text += button.Text;
+			if (button.Text == ".")
+				point_pressed = true;
+
+			if(point_pressed == false)
+				Output.Text += button.Text;
+			else if(point_pressed == true && button.Text != ".")
+			         Output.Text += button.Text;
+
+			if(Output.Text == ".")
+				Output.Text = "0.";
+
 			equals_pressed = false;
 			operation_pressed = false;
 
@@ -44,16 +56,18 @@ namespace NewPr
 		private void OnOperatorClicked(object sender, System.EventArgs e)
 		{
 			str = Output.Text;
+			point_pressed = false;
 			operation_pressed = true;
 			operatorEvent.Invoke (sender,e);
 			Output.Text = str;
 		}
 
-		private void OnEquelsClicked(object sender, System.EventArgs e)
+		private void OnEqualsClicked(object sender, System.EventArgs e)
 		{
 			str = Output.Text;
+			point_pressed = false;
 			equals_pressed = true;
-			equelsEvent.Invoke (sender,e);
+			equalsEvent.Invoke (sender,e);
 			Output.Text = str;
 			operation_pressed = false;
 		}
