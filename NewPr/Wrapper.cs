@@ -9,50 +9,81 @@ namespace NewPr
 	{
 		SimpleCalculatorService simpleCalc;
 		MyPage myPage;
-		string operation;
-		double value;
+	
+		public double Value {get;set;}
+		public string Operation {get;set;}
+
+		public Wrapper(){}
 
 		public Wrapper (MyPage myPage)
 		{
 			this.simpleCalc = new SimpleCalculatorService ();
 			this.myPage = myPage;
 			this.myPage.operatorEvent += new EventHandler(MyPage_operatorEvent);
-			this.myPage.equalsEvent += new EventHandler (MyPage_equalsEvent);
 		}
 
 
 		void MyPage_operatorEvent (object sender, EventArgs e)
 		{
-			Button b = (Button)sender; 
-			operation = b.Text;
-			value =	Convert.ToDouble (this.myPage.str);
+			Button b = (Button)sender;
+			if (Value == 0)
+				Value =	Convert.ToDouble (this.myPage.Str);
 
-		}
+			//Проверка на нажатие кнопки с цифрой и реализация арифметических операций
+			if (myPage.Button_pressed == true)
+			{
+				switch (Operation) 
+				{
+				case "+":
+					myPage.Button_pressed = false;
+								
+					Value = this.simpleCalc.Summ(Value, Convert.ToDouble (this.myPage.Str));
+					this.myPage.Str = Convert.ToString (Value);
 
-		void MyPage_equalsEvent (object sender, EventArgs e)
-		{
-			
-			switch (operation) {
-			case "+":
-				this.myPage.str = Convert.ToString (this.simpleCalc.Summ(value, Convert.ToDouble (this.myPage.str)));
-				break;
-			case "-":
-				this.myPage.str = Convert.ToString (this.simpleCalc.Diff(value, Convert.ToDouble (this.myPage.str)));
-				break;
-			case "*":
-				this.myPage.str = Convert.ToString (this.simpleCalc.Multi(value, Convert.ToDouble (this.myPage.str)));
-				break;
-			case "/":
-				if (this.myPage.str == "0")
-					this.myPage.str = "На ноль делить нельзя!";
-				else
-					this.myPage.str = Convert.ToString (this.simpleCalc.Div(value, Convert.ToDouble (this.myPage.str)));
-				break;
+					break;
 
+				case "-":
+					myPage.Button_pressed = false;
+
+					Value = this.simpleCalc.Diff(Value, Convert.ToDouble (this.myPage.Str));
+					this.myPage.Str = Convert.ToString (Value);
+
+					break;
+
+				case "*":
+					myPage.Button_pressed = false;
+
+					Value = this.simpleCalc.Multi(Value, Convert.ToDouble (this.myPage.Str));
+					this.myPage.Str = Convert.ToString (Value);
+
+					break;
+
+				case "/":
+					myPage.Button_pressed = false;
+
+					if (this.myPage.Str == "0")
+						this.myPage.Str = "На ноль делить нельзя!";
+					else 
+					{
+						Value = this.simpleCalc.Div(Value, Convert.ToDouble (this.myPage.Str));
+						this.myPage.Str = Convert.ToString (Value);
+					}
+					break;
+
+				default:
+					break;
+			    }
 			}
 
+			if (b.Text == "=")
+			{
+				this.myPage.Str = Convert.ToString (Value);
+				Value = 0;
+				Operation = "";
+			}
+			else
+			Operation = b.Text;	
+
 		}
-
-	}
+    }
 }
-
