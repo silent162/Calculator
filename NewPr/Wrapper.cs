@@ -3,19 +3,19 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace NewPr
+namespace Calculator
 {
 	public class Wrapper
 	{
 		SimpleCalculatorService simpleCalc;
-		MyPage myPage;
+		CalculatorPage myPage;
 	
 		public static double Value {get;set;}
 		public static string Operation {get;set;}
 
 		public Wrapper(){}
 
-		public Wrapper (MyPage myPage)
+		public Wrapper (CalculatorPage myPage)
 		{
 			this.simpleCalc = new SimpleCalculatorService ();
 			this.myPage = myPage;

@@ -1,7 +1,7 @@
-NewPr.Droid.MainActivity, NewPr.Droid;md50372eec3ea9e0f1c18a24958318714da.MainActivity
-NewPr.Droid.MainActivity, NewPr.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50372eec3ea9e0f1c18a24958318714da.MainActivity
-NewPr.Droid.MainActivity;md50372eec3ea9e0f1c18a24958318714da.MainActivity
-newpr.droid.MainActivity;md50372eec3ea9e0f1c18a24958318714da.MainActivity
+Calculator.Droid.MainActivity, NewPr.Droid;md5319f031fc329b5f41f9a86f8fe12ced1.MainActivity
+Calculator.Droid.MainActivity, NewPr.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5319f031fc329b5f41f9a86f8fe12ced1.MainActivity
+Calculator.Droid.MainActivity;md5319f031fc329b5f41f9a86f8fe12ced1.MainActivity
+calculator.droid.MainActivity;md5319f031fc329b5f41f9a86f8fe12ced1.MainActivity
 Android.Support.V4.App.FragmentManager/IOnBackStackChangedListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
 Android.Support.V4.App.FragmentManager/IOnBackStackChangedListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
 Android.Support.V4.App.FragmentManager.IOnBackStackChangedListenerImplementor;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor

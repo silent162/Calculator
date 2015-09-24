@@ -6,7 +6,7 @@ using Xamarin.UITest;
 using Xamarin.UITest.Android;
 using Xamarin.UITest.Queries;
 
-namespace NewPr.UITests
+namespace Calculator.UITests
 {
 	[TestFixture]
 	public class Tests

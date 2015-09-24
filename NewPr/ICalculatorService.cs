@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NewPr
+namespace Calculator
 {
 	public interface ICalculatorService
 	{
