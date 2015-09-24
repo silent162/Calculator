@@ -28,7 +28,7 @@ namespace NewPr
 			Button_pressed = true;
 
 			//Условие если первой нажали кнопку "."
-			if (button.Text == "." && Output.Text == "0")
+			if (button.Text == "." && Output.Text == "0" || operation_pressed && button.Text == ".")
 			{
 				point_pressed = true;
 				Output.Text = "0.";
@@ -54,17 +54,20 @@ namespace NewPr
 
 		}
 
+		// Обнуляет последее введенное значение
 		private void OnCEClicked(object sender, System.EventArgs e)
 		{
 			Output.Text = "0";
 			point_pressed = false;
 		}
 
+		//Полностью обнуляет все значения
 		private void OnCClicked(object sender, System.EventArgs e)
 		{
 			Output.Text = "0";
 			point_pressed = false;
-			new Wrapper ().Value = 0;
+			NewPr.Wrapper.Value = 0;
+			NewPr.Wrapper.Operation = "";
 		}
 
 		private void OnOperatorClicked(object sender, System.EventArgs e)

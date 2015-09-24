@@ -10,8 +10,8 @@ namespace NewPr
 		SimpleCalculatorService simpleCalc;
 		MyPage myPage;
 	
-		public double Value {get;set;}
-		public string Operation {get;set;}
+		public static double Value {get;set;}
+		public static string Operation {get;set;}
 
 		public Wrapper(){}
 
@@ -39,7 +39,6 @@ namespace NewPr
 								
 					Value = this.simpleCalc.Summ(Value, Convert.ToDouble (this.myPage.Str));
 					this.myPage.Str = Convert.ToString (Value);
-
 					break;
 
 				case "-":
@@ -47,7 +46,6 @@ namespace NewPr
 
 					Value = this.simpleCalc.Diff(Value, Convert.ToDouble (this.myPage.Str));
 					this.myPage.Str = Convert.ToString (Value);
-
 					break;
 
 				case "*":
@@ -55,7 +53,6 @@ namespace NewPr
 
 					Value = this.simpleCalc.Multi(Value, Convert.ToDouble (this.myPage.Str));
 					this.myPage.Str = Convert.ToString (Value);
-
 					break;
 
 				case "/":
@@ -71,6 +68,7 @@ namespace NewPr
 					break;
 
 				default:
+					myPage.Button_pressed = false;
 					break;
 			    }
 			}
