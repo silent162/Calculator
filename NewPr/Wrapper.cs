@@ -75,7 +75,9 @@ namespace Calculator
 
 			if (b.Text == "=")
 			{
-				this.myPage.Str = Convert.ToString (Value);
+				if (this.myPage.Str != "На ноль делить нельзя!")					
+				    this.myPage.Str = Convert.ToString (Value);
+				
 				Value = 0;
 				Operation = "";
 			}

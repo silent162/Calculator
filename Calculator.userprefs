@@ -1,6 +1,10 @@
 ﻿<Properties StartupItem="Droid\Calculator.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.AVD_for_7_WSVGA_Tablet" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NewPr\Wrapper.cs">
+    <Files>
+      <File FileName="NewPr\Wrapper.cs" Line="79" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
